@@ -1,7 +1,11 @@
 import numpy as np
 
 class Perceptron(object):
-
+    '''
+        epochs: Total number of training cycles. 
+        bias: it's the y-intercep, add more flexibility to our model.  
+        leraning_rate: it's a hyper parameter which control how much we are adjusting the weights
+    '''
 
     def __init__(self,bias=0,epochs=100,learning_rate=.01):
         self.bias=bias
@@ -20,9 +24,6 @@ class Perceptron(object):
                 self.w+=self.learning_rate * error * xis
 
         # print(self.w,self.bias)
-
-        print(self.w,self.bias)
-        # return w_sum
             
 
     def predict(self,_x):
@@ -38,10 +39,15 @@ X_train=np.array([
     [1,1],
 ])
 
+# 
 y=np.array([0,0,0,1])
 
 
 
-p=Perceptron()
-p.train(X_train,y)
-# print(p.predict([1,1]))
+if __name__ == '__main__':
+    p=Perceptron()
+
+    # 
+    p.train(X_train,y)
+    # 
+    print(p.predict([1,1]))
