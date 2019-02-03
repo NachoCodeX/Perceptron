@@ -1,9 +1,0 @@
-{
-  "name": "Perceptron",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "numjs": "^0.16.0"
-  }
-}
